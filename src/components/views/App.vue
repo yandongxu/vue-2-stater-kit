@@ -3,13 +3,13 @@
     <h1>title</h1>
     <ul>
       <li>
-        <router-link to="home">Home</router-link>
+        <router-link :to="{ name: 'home' }">Home</router-link>
       </li>
       <li>
-        <router-link to="foo">Foo</router-link>
+        <router-link :to="{ name: 'foo' }">Foo</router-link>
       </li>
       <li>
-        <router-link to="bar">Bar</router-link>
+        <router-link :to="{ name: 'bar' }">Bar</router-link>
       </li>
     </ul>
     <transition name="fade" mode="out-in">
