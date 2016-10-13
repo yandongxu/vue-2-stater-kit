@@ -1,0 +1,24 @@
+{
+  "name": "code-spliting-with-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p --progress",
+    "dev": "webpack-dashboard -- node server.js",
+    "start": "npm run dev"
+  },
+  "keywords": [],
+  "author": "dongxu <dongxu@me.com>",
+  "license": "UNLISENCED",
+  "devDependencies": {
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-preset-es2015": "^6.16.0",
+    "html-webpack-plugin": "^2.22.0",
+    "webpack": "^1.13.2",
+    "webpack-dashboard": "^0.2.0",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
