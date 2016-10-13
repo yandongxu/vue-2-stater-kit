@@ -14,7 +14,7 @@ module.exports = {
   devtool: isProd ? '#source-map' : '#cheap-module-eval-source-map',
 
   entry: {
-    main: './src/main.js'
+    app: './src/main.js'
   },
 
   output: {
@@ -30,11 +30,14 @@ module.exports = {
         include: [
           path.resolve(ROOT, 'src')
         ],
-        loader: 'babel',
-        query: {
-          presets: ['es2015'],
-          plugins: ['transform-object-assign']
-        }
+        loader: 'babel'
+      },
+      {
+        test: /\.vue$/,
+        include: [
+          path.resolve(ROOT, 'src')
+        ],
+        loader: 'vue'
       }
     ]
   },
@@ -51,9 +54,12 @@ module.exports = {
         filename: TEMPLATE_OUTPUT_PATH,
         inject: 'body',
         hash: true,
-        title: 'Wonder Chart'
+        title: 'Code Spliting'
     }),
 
-    new webpack.optimize.DedupePlugin()
+    new webpack.optimize.DedupePlugin(),
+
+    // optimize module ids by occurence count
+    new webpack.optimize.OccurenceOrderPlugin()
   ]
 };

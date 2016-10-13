@@ -1,23 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title><%= htmlWebpackPlugin.options.title %></title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  /* NOTE: transition */
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all .2s ease;
+  }
+
+  .fade-enter,
+  .fade-leave-active {
+    opacity: 0;
+  }
+
+  </style>
 </head>
 <body>
-    <div id="root"></div>
-    <script>
-    if (!window.console) {
-        var noop = function() {};
-        window.console = {
-            log: noop,
-            error: noop,
-            warn: noop,
-            info: noop
-        }
+  <div id="root"></div>
+
+  <script>
+  if (!window.console) {
+    var noop = function() {};
+    window.console = {
+      log: noop,
+      error: noop,
+      warn: noop,
+      info: noop
     }
-    </script>
+  }
+  </script>
 </body>
 </html>
