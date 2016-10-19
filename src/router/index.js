@@ -11,6 +11,11 @@ const Foo = resolve => require(['../components/views/Foo.vue'], resolve);
 const Bar = resolve => require(['../components/views/Bar.vue'], resolve);
 const Other = resolve => require(['../components/views/Other.vue'], resolve);
 
+// NOTE: Named async components
+// const Foo = r => require.ensure([], () => r(require('../components/views/Foo.vue')), 'group-foo');
+// const Bar = r => require.ensure([], () => r(require('../components/views/Bar.vue')), 'group-foo');
+// const Other = r => require.ensure([], () => r(require('../components/views/Other.vue')), 'group-foo');
+
 Vue.use(Router);
 
 export default new Router({
