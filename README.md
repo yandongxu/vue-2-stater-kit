@@ -10,4 +10,4 @@
 
 - vue-resource: 是否支持 vue@2 ?
 - lru-cache: (can do & will do)
-- HTML5 history support
+- HTML5 history support <https://router.vuejs.org/en/essentials/history-mode.html>
