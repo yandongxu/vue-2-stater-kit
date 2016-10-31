@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>title</h1>
+    <h1>{{ title }}</h1>
     <ul>
       <li>
         <router-link :to="{ name: 'home' }">Home</router-link>
@@ -10,6 +10,9 @@
       </li>
       <li>
         <router-link :to="{ name: 'bar' }">Bar</router-link>
+      </li>
+      <li>
+        <router-link :to="{ name: 'posts' }">Posts</router-link>
       </li>
     </ul>
     <transition name="fade" mode="out-in">
@@ -22,9 +25,9 @@
 export default {
   name: 'App',
 
-  date () {
+  data () {
     return {
-      title: 'Code Spliting'
+      title: 'Vue family'
     }
   }
 };

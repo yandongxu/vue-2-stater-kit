@@ -10,6 +10,8 @@ import Router from 'vue-router';
 const Foo = resolve => require(['../components/views/Foo.vue'], resolve);
 const Bar = resolve => require(['../components/views/Bar.vue'], resolve);
 const Other = resolve => require(['../components/views/Other.vue'], resolve);
+const Posts = resolve => require(['../components/views/Posts.vue'], resolve);
+const Post = resolve => require(['../components/views/Post.vue'], resolve);
 
 // NOTE: Named async components
 // const Foo = r => require.ensure([], () => r(require('../components/views/Foo.vue')), 'group-foo');
@@ -32,6 +34,16 @@ export default new Router({
       name: 'bar',
       path: '/bar',
       component: Bar
+    },
+    {
+      name: 'posts',
+      path: '/posts',
+      component: Posts
+    },
+    {
+      name: 'post',
+      path: '/post/:id',
+      component: Post
     },
     {
       path: '*',

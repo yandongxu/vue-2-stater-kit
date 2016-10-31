@@ -1,15 +1,15 @@
 {
-  "name": "code-spliting-with-webpack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "vue2-starter-kit",
+  "version": "0.1.0",
+  "description": "Vue@2 stater kit",
+  "main": "main.js",
   "scripts": {
     "build": "webpack -p --progress",
     "dev": "webpack-dashboard -- node server.js",
     "start": "npm run dev"
   },
   "keywords": [],
-  "author": "dongxu <dongxu@me.com>",
+  "author": "yandongxu <nextocean@gmail.com>",
   "license": "UNLISENCED",
   "devDependencies": {
     "babel-core": "^6.17.0",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "vue": "^2.0.2",
+    "vue-resource": "^1.0.3",
     "vue-router": "^2.0.1",
     "vuex": "^2.0.0",
     "vuex-router-sync": "^3.0.0"
